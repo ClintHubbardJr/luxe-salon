@@ -1,4 +1,178 @@
 body {
-  background: url('../images/floral-bg.png');
-  padding-top: 70px;
+  padding-top: 60ex;
+}
+
+body > section {
+  padding: 3em 0;
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  // text-transform: uppercase;
+  // text-align: center;
+  color: @brand-secondary;
+}
+p, ul, dt, dd {
+  // text-align: center;
+  color: @brand-secondary;
+}
+
+// h1, .h1 { font-size: @font-size-h1; }
+// h2, .h2 { font-size: @font-size-h2; }
+// h3, .h3 { font-size: @font-size-h3; }
+// h4, .h4 { font-size: @font-size-h4; }
+// h5, .h5 { font-size: @font-size-h5; }
+// h6, .h6 { font-size: @font-size-h6; }
+
+.navbar {
+  .navbar-header {
+    .navbar-brand {
+      margin: 0;
+      overflow: visible;
+      a:hover {
+        text-decoration: none;
+        color: darken(@link-color, 15%);
+      }
+    }
+  }
+  .navbar-nav {
+    > li {
+      > a {
+        font-size: @font-size-h5;
+        padding-top: 21px;
+        padding-bottom: 21px;
+      }
+    }
+  }
+}
+
+section > div > header,
+footer > div > header {
+  border-bottom: 1px solid @gray-lighter;
+}
+
+#call-to-action {
+  background: url('/assets/chairs.jpg') no-repeat center center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+  background-size: cover;
+  min-height: 60ex;
+
+  .welcome {
+    .container;
+    padding-top: 13ex;
+    padding-bottom: 5ex;
+    h1, h2, h3, p {
+      color: #fff;
+      text-align: center;
+    }
+    p {
+      padding: 0 20%;
+    }
+    h1 {
+      font-size: 4em;
+    }
+  }
+}
+
+#services {
+  background-color: white;
+  > div {
+    header {
+      .h1 {
+        text-align: center;
+      }
+    }
+    article {
+      margin-top: 4ex;
+      padding: 0;
+      .h2,ul {
+        text-align: center;
+      }
+      ul {
+        list-style: none;
+        padding: 0;
+      }
+    }
+  }
+
+}
+
+#stylists {
+  background-color: @brand-primary;
+  h1, h2, h3, p, dt, dd, .h1, .h2, .h3, {
+    // color: @brand-secondary;
+    // text-align: center;
+  }
+  header {
+    .h1 {
+      text-align: center;
+    }
+  }
+  .stylist {
+    margin: 4ex 0;
+    img {
+      // display: block;
+      // width: 200px;
+      // border-radius: 35% 0%;
+      // margin: 2ex auto;
+    }
+    .bio {
+      h1 {
+        margin-top: 0;
+      }
+    }
+    p {
+      // margin: 4ex auto;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    dl {
+      margin-top: 20px;
+    }
+  }
+}
+
+#our-products {
+  background-color: white;
+  header {
+    .h1 {
+      text-align: center;
+    }
+  }
+  .product-lines {
+    h2 {
+      text-align: center;
+    }
+    .product {
+      h3,ul {
+        text-align: center;
+      }
+      ul {
+        list-style: none;
+        padding: 0;
+      }
+    }
+  }
+}
+
+#contact {
+  min-height: 400px;
+  header {
+    margin-bottom: 2ex;
+    h2 {
+      text-align: center;
+    }
+  }
+  .form-group {
+    margin-bottom: 2ex;
+  }
+  p {
+    text-align: center;
+  }
 }

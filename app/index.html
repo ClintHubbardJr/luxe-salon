@@ -11,88 +11,340 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <link rel="stylesheet" href="styles/main.css">
+    <link href='http://fonts.googleapis.com/css?family=Domine:400,700|Dancing+Script:400,700' rel='stylesheet' type='text/css'>
+    <!-- <link href='http://fonts.googleapis.com/css?family=Arvo:400,400italic|Open+Sans:300italic,600italic,300,600' rel='stylesheet' type='text/css'> -->
     <!-- build:js scripts/vendor/modernizr.js -->
     <script src="bower_components/modernizr/modernizr.js"></script>
     <!-- endbuild -->
   </head>
-  <body>
+  <body data-spy="scroll" data-target=".navbar-fixed-top">
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-6">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Luxe Salon</a>
+          <h1 class="navbar-brand"><a class="h2" href="#call-to-action">Luxe Salon</a></h1>
         </div>
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-6">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="#services">Services</a></li>
+        <div class="collapse navbar-collapse" id="main-nav">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#services">Services</a></li>
             <li><a href="#stylists">Stylists</a></li>
-            <li><a href="#products">Products</a></li>
+            <li><a href="#our-products">Products</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
-          <form class="navbar-form navbar-right" role="search">
-            <div class="form-group">
-              <input type="text" class="form-control" placeholder="Search">
-            </div>
-            <button type="submit" class="btn btn-default">Submit</button>
-          </form>
         </div><!-- /.navbar-collapse -->
       </div>
     </nav>
     <header id="call-to-action">
-      <div class="container">
-        <section class="welcome">
-          <h1>Welcome to Luxe Salon</h1>
-          <p>Luxe Salon is a full service hair salon located in beautiful historic downtown Snohomish, Washington.</p>
-          <p>Annie Cheney and Kimberly Young opened Luxe Salon in November of 2012. They bring many years of experience and talent to their new location. Luxe Salon offers luxury hair care services by highly trained stylists. They invite you to come in and relax in their chic and cozy atmosphere.</p>
-          <p>Luxe Salon looks forward to making you look your best for any occasion. Please call today to schedule your appointment.</p>
-        </section>
-
-      </div>
+      <section class="welcome">
+        <h1>Welcome to Luxe Salon</h1>
+        <p>A full service hair salon located in beautiful historic downtown Snohomish, Washington. We look forward to making you look your best for any occasion. Please call today to schedule your appointment.</p>
+        <h2>360-863-2554</h2>
+        <h3> ~ Salon Hours ~ </h3>
+        <p>Wed - Thu: 10 - 8</p>
+        <p>Fri - Sat: 10 - 5</p>
+      </section>
     </header>
     <section id="services">
       <div class="container">
-        <h2>Sevices</h2>
-        <hr>
-        <h3>Haircuts</h3>
-        <ul>
-          <li>Men’s Haircut: $25.00</li>
-          <li>Women’s Haircut: $40.00</li>
-          <li>Children’s Haircut: $25.00</li>
-          <li>Curly Haircut: $95.00</li>
-        </ul>
-        <h3>Color Services</h3>
-        <ul>
-          <li>Color: $60.00</li>
-          <li>Partial Foil: $70.00</li>
-          <li>Full Foil: $100.00</li>
-          <li>Ombre: $100.00</li>
-          <li>Balayage: $100.00</li>
-        </ul>
-        <h3>Texturizing</h3>
-        <ul>
-          <li>Perms: $70.00</li>
-          <li>Keratin Straightening: $225.00</li>
-        </ul>
+        <header>
+          <h2 class="h1">Services</h2>
+        </header>
+        <div class="row">
+          <article class="col-md-4">
+            <h3 class="h2">Haircuts</h3>
+            <ul>
+              <li>Men’s Haircut: $25.00</li>
+              <li>Women’s Haircut: $40.00</li>
+              <li>Children’s Haircut: $25.00</li>
+              <li>Curly Haircut: $95.00</li>
+            </ul>
+          </article>
+          <article class="col-md-4">
+            <h3 class="h2">Color</h3>
+            <ul>
+              <li>Color: $60.00</li>
+              <li>Partial Foil: $70.00</li>
+              <li>Full Foil: $100.00</li>
+              <li>Ombre: $100.00</li>
+              <li>Balayage: $100.00</li>
+            </ul>
+          </article>
+          <article class="col-md-4">
+            <h3 class="h2">Texturizing</h3>
+            <ul>
+              <li>Perms: $70.00</li>
+              <li>Keratin Straightening: $225.00</li>
+            </ul>
+          </article>
+        </div>
       </div>
     </section>
     <section id="stylists">
       <div class="container">
-        <h2>Stylists</h2>
+        <header>
+          <h2 class="h1">Stylists</h2>
+        </header>
+        <div class="row">
+          <article class="stylist col-md-6">
+            <div class="row">
+              <img class="col-md-4" src="/assets/stylist-kimberly.jpg" alt="kim" />
+              <div class="bio col-md-8">
+                <h1 class="h2">Kimberly</h1>
+                <p>A short and sweet stylist biography, orem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, aut, nam, quaerat, assumenda repellendus saepe soluta culpa vero fuga similique eligendi autem dicta numquam sapiente quasi ut pariatur. Fugit, beatae.</p>
+              </div>
+            </div>
+            <dl>
+              <dt>2012</dt>
+              <dd>Pravana straightening system</dd>
+              <dt>2010</dt>
+              <dd>Bumble &amp; Bumble Cutting Class</dd>
+              <dt>2009</dt>
+              <dd>Unite Style class</dd>
+              <dt>2008</dt>
+              <dd>Eclectic Color class</dd>
+              <dt>2007</dt>
+              <dd>Framesi Color class</dd>
+              <dt>2005</dt>
+              <dd>Framesi Foiling class</dd>
+              <dt>2004</dt>
+              <dd>
+                <ul>
+                  <li>Sexy hair class, structure and motion cutting techniques</li>
+                  <li>Youngblood Mineral make-up class, bridal and trend</li>
+                </ul>
+              </dd>
+              <dt>2003</dt>
+              <dd>
+                <ul>
+                  <li>Six month apprentice program, Kirkland WA</li>
+                  <li>Vidal Sasson, Classic Cutting Course, Santa Monica Ca</li>
+                  <li>Identity Make-up, Trend and Bridal Make-up</li>
+                </ul>
+              </dd>
+              <dt>2002</dt>
+              <dd>TIGI, spring cutting and make-up class</dd>
+              <dt>2001-2003</dt>
+              <dd>Cosmetology License, Kirkland Beauty School</dd>
+            </dl>
+          </article>
+          <article class="stylist col-md-6">
+            <div class="row">
+              <img class="col-md-4" src="/assets/stylist-annie.jpg" alt="anne" />
+              <div class="bio col-md-8">
+                <h1 class="h2">Annie</h1>
+                <p>A short and sweet stylist biography, orem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, aut, nam, quaerat, assumenda repellendus saepe soluta culpa vero fuga similique eligendi autem dicta numquam sapiente quasi ut pariatur. Fugit, beatae.</p>
+              </div>
+            </div>
+            <dl>
+              <dt>2012</dt>
+              <dd>Pravana Straightening System</dd>
+              <dt>2011</dt>
+              <dd>Bumble &amp; Bumble Cutting Class</dd>
+              <dt>2010</dt>
+              <dd>Framesi Color class</dd>
+              <dt>2009</dt>
+              <dd>Unite Style class</dd>
+              <dt>2008</dt>
+              <dd>
+                <ul>
+                  <li>Keune special event styling</li>
+                  <li>Eclectic Color class</li>
+                </ul>
+              </dd>
+              <dt>2007</dt>
+              <dd>Framesi Color class</dd>
+              <dt>2005</dt>
+              <dd>Framesi Foiling class</dd>
+              <dt>1990</dt>
+              <dd>Cosmetology License, Gene Juarez Salon Academy</dd>
+            </dl>
+          </article>
+        </div>
+        <div class="row">
+          <article class="stylist col-md-6">
+            <div class="row">
+              <img class="col-md-4" src="/assets/stylist-meagan.jpg" alt="meagan" />
+              <div class="bio col-md-8">
+                <h1 class="h2">Meagan</h1>
+                <p>A short and sweet stylist biography, orem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, aut, nam, quaerat, assumenda repellendus saepe soluta culpa vero fuga similique eligendi autem dicta numquam sapiente quasi ut pariatur. Fugit, beatae.</p>
+              </div>
+            </div>
+            <dl>
+              <dt>2012</dt>
+              <dd>IBS Las Vegas</dd>
+              <dt>2011</dt>
+              <dd>Ouidad Certified Training</dd>
+              <dt>2010</dt>
+              <dd>
+                <ul>
+                  <li>Keratin Complex Smoothing training</li>
+                  <li>L’ Oreal Pro color and product</li>
+                </ul>
+              </dd>
+              <dt>2009</dt>
+              <dd>Redken Symposium</dd>
+              <dt>2008</dt>
+              <dd>Pureology Pure Artist Training</dd>
+              <dt>2006</dt>
+              <dd>Everett Community College - Cosmetology</dd>
+            </dl>
+          </article>
+          <article class="stylist col-md-6">
+            <div class="row">
+              <img class="col-md-4" src="/assets/stylist-kelsie.jpg" alt="kelsie" />
+              <div class="bio col-md-8">
+                <h1 class="h2">Kelsie</h1>
+                <p>A short and sweet stylist biography, orem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, aut, nam, quaerat, assumenda repellendus saepe soluta culpa vero fuga similique eligendi autem dicta numquam sapiente quasi ut pariatur. Fugit, beatae.</p>
+              </div>
+            </div>
+            <dl>
+              <dt>2012</dt>
+              <dd>Pravana straightening system</dd>
+              <dt>2010</dt>
+              <dd>Bumble &amp;s Bumble Cutting Class</dd>
+              <dt>2009</dt>
+              <dd>Unite Style class</dd>
+              <dt>2008</dt>
+              <dd>Eclectic Color class</dd>
+              <dt>2007</dt>
+              <dd>Framise Color class</dd>
+              <dt>2005</dt>
+              <dd>Framise Foiling class</dd>
+              <dt>2004</dt>
+              <dd>
+                <ul>
+                  <li>Sexy hair class, structure and motion cutting techniques</li>
+                  <li>Youngblood Mineral make-up class, bridal and trend</li>
+                </ul>
+              </dd>
+            </dl>
+          </article>
+        </div>
       </div>
     </section>
-    <section id="products">
+    <section id="our-products">
       <div class="container">
-        <h2>Products</h2>
+        <header>
+          <h2 class="h1">Products</h2>
+        </header>
+        <div class="product-lines row">
+
+          <div class="col-md-4">
+            <h2>Redken</h2>
+            <div class="product">
+              <h3>Shampoo</h3>
+              <ul>
+                <li>32oz: $75.00</li>
+                <li>24oz: $50.00</li>
+                <li>160z: $25.00</li>
+              </ul>
+            </div>
+            <div class="product">
+              <h3>Conditioner</h3>
+              <ul>
+                <li>32oz: $75.00</li>
+                <li>24oz: $50.00</li>
+                <li>160z: $25.00</li>
+              </ul>
+            </div>
+            <div class="product">
+              <h3>Lotion</h3>
+              <ul>
+                <li>32oz: $75.00</li>
+                <li>24oz: $50.00</li>
+                <li>160z: $25.00</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <h2>Paul Michelle</h2>
+            <div class="product">
+              <h3>Shampoo</h3>
+              <ul>
+                <li>32oz: $75.00</li>
+                <li>24oz: $50.00</li>
+                <li>160z: $25.00</li>
+              </ul>
+            </div>
+            <div class="product">
+              <h3>Conditioner</h3>
+              <ul>
+                <li>32oz: $75.00</li>
+                <li>24oz: $50.00</li>
+                <li>160z: $25.00</li>
+              </ul>
+            </div>
+            <div class="product">
+              <h3>Lotion</h3>
+              <ul>
+                <li>32oz: $75.00</li>
+                <li>24oz: $50.00</li>
+                <li>160z: $25.00</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <h2>Biolage</h2>
+            <div class="product">
+              <h3>Shampoo</h3>
+              <ul>
+                <li>32oz: $75.00</li>
+                <li>24oz: $50.00</li>
+                <li>160z: $25.00</li>
+              </ul>
+            </div>
+            <div class="product">
+              <h3>Conditioner</h3>
+              <ul>
+                <li>32oz: $75.00</li>
+                <li>24oz: $50.00</li>
+                <li>160z: $25.00</li>
+              </ul>
+            </div>
+            <div class="product">
+              <h3>Lotion</h3>
+              <ul>
+                <li>32oz: $75.00</li>
+                <li>24oz: $50.00</li>
+                <li>160z: $25.00</li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
     <footer id="contact">
       <div class="container">
-        <h2>Contact</h2>
+        <header>
+          <h2 class="h1">Contact</h2>
+        </header>
+        <div class="row">
+          <div class="col-md-6 col-md-offset-3">
+            <form class="form-inline row" role="form">
+              <div class="form-group col-md-12">
+                <label class="sr-only" for="exampleInputEmail2">Name</label>
+                <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Enter your name">
+              </div>
+              <div class="form-group col-md-12">
+                <label class="sr-only" for="exampleInputEmail2">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Enter email">
+              </div>
+              <div class="form-group col-md-12">
+                <textarea class="form-control" rows="3" placeholder="What can we do your you?"></textarea>
+              </div>
+              <div class="form-group col-md-12">
+                <button type="submit" class="btn btn-default">Send</button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+
       </div>
     </footer>
 
@@ -115,7 +367,6 @@
         <!-- build:js scripts/main.js -->
         <script src="bower_components/jquery/jquery.js"></script>
         <script src="scripts/main.js"></script>
-        <script src="scripts/hello.js"></script>
         <!-- endbuild -->
 
         <!-- build:js scripts/vendor/bootstrap.js -->
