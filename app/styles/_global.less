@@ -1,15 +1,14 @@
 body {
-  padding-top: 60ex;
+  padding-top: 62px;
 }
 
 body > section {
-  padding: 3em 0;
+  padding: 2ex 0 3ex;
 }
 
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
-  // text-transform: uppercase;
-  // text-align: center;
+  margin: 1ex 0 .5ex;
   color: @brand-secondary;
 }
 p, ul, dt, dd {
@@ -17,18 +16,35 @@ p, ul, dt, dd {
   color: @brand-secondary;
 }
 
-// h1, .h1 { font-size: @font-size-h1; }
-// h2, .h2 { font-size: @font-size-h2; }
-// h3, .h3 { font-size: @font-size-h3; }
-// h4, .h4 { font-size: @font-size-h4; }
-// h5, .h5 { font-size: @font-size-h5; }
-// h6, .h6 { font-size: @font-size-h6; }
+h1, .h1 { font-size: @font-size-h1; }
+h2, .h2 { font-size: @font-size-h2; }
+h3, .h3 { font-size: @font-size-h3; }
+h4, .h4 { font-size: @font-size-h4; }
+h5, .h5 { font-size: @font-size-h5; }
+h6, .h6 { font-size: @font-size-h6; }
+
+.before-icon {
+  display: inline-block;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  margin-right: 0.5em;
+}
+
+.btn {
+  border-radius: 0;
+}
 
 .navbar {
   .navbar-header {
     .navbar-brand {
       margin: 0;
       overflow: visible;
+      a {
+        font-family: @font-family-heading;
+      }
       a:hover {
         text-decoration: none;
         color: darken(@link-color, 15%);
@@ -46,63 +62,174 @@ p, ul, dt, dd {
   }
 }
 
-section > div > header,
+section > div > header > .h1 {
+  position: relative;
+  line-height: 1.75;
+  &::before {
+    content: "";
+    background: url('../assets/filigree-rule-left.svg') no-repeat center left;
+    background-size: 300%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 28%;
+    height: 100%;
+    @media (min-width: @screen-sm) {
+      width: 37%;
+      background-size: 180%;
+    }
+    @media (min-width: @screen-md) {
+      width: 47%;
+      background-size: 100%;
+    }
+  }
+  &::after {
+    content: "";
+    background: url('../assets/filigree-rule-right.svg') no-repeat center right;
+    background-size: 300%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 28%;
+    height: 100%;
+    @media (min-width: @screen-sm) {
+      width: 37%;
+      background-size: 180%;
+    }
+    @media (min-width: @screen-md) {
+      width: 47%;
+      background-size: 100%;
+    }
+  }
+}
 footer > div > header {
   border-bottom: 1px solid @gray-lighter;
 }
 
-#call-to-action {
-  background: url('/assets/chairs.jpg') no-repeat center center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: -1;
-  background-size: cover;
-  min-height: 60ex;
-
-  .welcome {
-    .container;
-    padding-top: 13ex;
-    padding-bottom: 5ex;
-    h1, h2, h3, p {
-      color: #fff;
+article {
+  margin: 4ex 0;
+  > header {
+    // background-color: @brand-primary;
+    border-bottom: 2px solid @brand-primary;
+    padding: 2ex 0;
+    h3 {
       text-align: center;
+      margin: 0;
     }
-    p {
-      padding: 0 20%;
+  }
+  > section {
+    // background-color: @gray-lighter;
+    padding: 2ex 1em;
+    ul {
+      text-align: center;
+      list-style: none;
+      padding: 2ex 0 0;
+      li {
+        text-align: left;
+        margin-bottom: .5ex;
+        span {
+          text-align: right;
+          float: right;
+        }
+      }
     }
-    h1 {
-      font-size: 4em;
+  }
+}
+
+#call-to-action {
+  position: relative;
+  overflow: hidden;
+  height: 70ex;
+  @media (min-width: @screen-sm) {
+    height: 52ex;
+  }
+  @media (min-width: @screen-md) {
+    height: 52ex;
+  }
+  #parallax-1 {
+    background:
+    linear-gradient(
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.2)
+      ),
+    url('http://placekitten.com/1600/600') no-repeat center center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+    background-size: cover;
+    height: 74ex;
+    margin-top: 5ex;
+    @media (min-width: @screen-sm) {
+      background-size: cover;
+    }
+    @media (min-width: @screen-md) {
+      background-size: cover;
+    }
+    .welcome {
+      .container;
+      padding-top: 5ex;
+      padding-bottom: 5ex;
+      h1, h2, h3, p {
+        color: #fff;
+        text-align: center;
+        text-shadow: 1px 1px 1px #000;
+      }
+      p {
+        padding: 0 20%;
+      }
+      h1 {
+        font-size: 4em;
+        font-family: @font-family-heading;
+      }
     }
   }
 }
 
 #services {
   background-color: white;
-  > div {
-    header {
+  div {
+    > header {
       .h1 {
         text-align: center;
+        font-family: @font-family-heading;
       }
     }
-    article {
-      margin-top: 4ex;
-      padding: 0;
-      .h2,ul {
-        text-align: center;
-      }
-      ul {
-        list-style: none;
-        padding: 0;
-      }
-    }
+    // > article > section {
+    //   min-height: 25ex;
+    // }
+    // .haircuts {
+    //   h3 {
+    //     &::before {
+    //       content: "\f0c4";
+    //       .before-icon;
+    //     }
+    //   }
+    // }
+    // .color {
+    //   h3 {
+    //     &::before {
+    //       content: "\f043";
+    //       .before-icon;
+
+    //     }
+    //   }
+    // }
+    // .texturizing {
+    //   h3 {
+    //     &::before {
+    //       content: "\f0d0";
+    //       .before-icon;
+    //     }
+    //   }
+    // }
   }
 
 }
 
 #stylists {
-  background-color: @brand-primary;
+  background: @brand-primary;
   h1, h2, h3, p, dt, dd, .h1, .h2, .h3, {
     // color: @brand-secondary;
     // text-align: center;
@@ -110,39 +237,56 @@ footer > div > header {
   header {
     .h1 {
       text-align: center;
+      font-family: @font-family-heading;
     }
   }
   .stylist {
+    position: relative;
     margin: 4ex 0;
     img {
-      // display: block;
-      // width: 200px;
-      // border-radius: 35% 0%;
-      // margin: 2ex auto;
+      display: block;
+      width: 100%;
     }
     .bio {
-      h1 {
+      background-color: white;
+      padding: 2ex;
+      h1, p {
         margin-top: 0;
+        text-align: center;
       }
-    }
-    p {
-      // margin: 4ex auto;
+      p {
+        margin-bottom: 0;
+      }
     }
     ul {
       list-style: none;
       padding: 0;
     }
+    button {
+      background-color: @gray-lighter;
+      width: 100%;
+      &::before {
+        content: "\f19d";
+        .before-icon;
+      }
+    }
     dl {
-      margin-top: 20px;
+      padding-top: 20px;
+      // background-color: @gray-lighter;
+      padding: 1ex 1em;
+      dd {
+        margin-bottom: .75ex;
+      }
     }
   }
 }
 
-#our-products {
+#products {
   background-color: white;
   header {
     .h1 {
       text-align: center;
+      font-family: @font-family-heading;
     }
   }
   .product-lines {
@@ -150,29 +294,59 @@ footer > div > header {
       text-align: center;
     }
     .product {
-      h3,ul {
+      h3,h4,ul {
         text-align: center;
+      }
+      h4 {
+        // border-bottom: 1px solid @brand-primary;
       }
       ul {
         list-style: none;
         padding: 0;
+        li {
+          margin: 0 25%;
+        }
       }
     }
   }
 }
 
 #contact {
-  min-height: 400px;
+  // background-color: @brand-primary;
+  background: url('http://placekitten.com/1600/600') no-repeat;
+  background-size: cover;
+  min-height: 65ex;
   header {
     margin-bottom: 2ex;
     h2 {
+      font-family: @font-family-heading;
       text-align: center;
+      color: white;
+      text-shadow: 1px 1px 1px #000;
     }
+  }
+  .form-inline {
+    padding-bottom: 4ex;
   }
   .form-group {
     margin-bottom: 2ex;
   }
   p {
     text-align: center;
+    text-shadow: 1px 1px 1px #000;
+  }
+  .embed-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    height: auto;
+    min-height: 400px;
+    iframe,
+    .embed-container object,
+    .embed-container embed {
+      position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    }
   }
 }
