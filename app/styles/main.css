@@ -7531,6 +7531,26 @@ article > section ul li span {
   text-align: center;
   font-family: "Dancing Script", Helvetica, Arial, sans-serif;
 }
+#services-products .product-lines > section ul li {
+  display: inline-block;
+  width: 44%;
+  padding: 3%;
+}
+@media (min-width: 768px) {
+  #services-products .product-lines > section ul li {
+    width: 30%;
+    padding: 1.5%;
+  }
+}
+@media (min-width: 992px) {
+  #services-products .product-lines > section ul li {
+    width: 20%;
+    padding: 2.5%;
+  }
+}
+#services-products .product-lines > section ul li img {
+  width: 100%;
+}
 #owners {
   background: #fff;
   min-height: 530px;

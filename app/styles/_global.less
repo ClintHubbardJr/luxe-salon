@@ -224,6 +224,28 @@ article {
       }
     }
   }
+  .product-lines {
+    > section {
+      ul {
+        li {
+          display: inline-block;
+          width: 44%;
+          padding: 3%;
+          @media (min-width: @screen-sm) {
+            width: 30%;
+            padding: 1.5%;
+          }
+          @media (min-width: @screen-md) {
+            width: 20%;
+            padding: 2.5%;
+          }
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
 
 }
 
