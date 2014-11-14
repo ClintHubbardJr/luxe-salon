@@ -7558,6 +7558,9 @@ article > section ul li span {
   font-family: "Dancing Script", Helvetica, Arial, sans-serif;
   margin-top: 0;
 }
+#call-to-action #parallax-1 .welcome h2 a {
+  color: white;
+}
 #call-to-action #parallax-1 .welcome h4 {
   color: #2fdab8;
   text-align: center;
