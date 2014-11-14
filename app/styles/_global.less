@@ -54,14 +54,18 @@ section {
   z-index: 2;
   > div {
     > header {
-
-      @media (min-width: @screen-sm) {
-        background: url('../assets/filigree-rule.svg') no-repeat center center;
-        background-size: 100%;
-      }
-      @media (min-width: @screen-md) {
-        background: url('../assets/filigree-rule.svg') no-repeat center center;
-        background-size: 100%;
+      margin: 10ex 0 4ex;
+      // @media (min-width: @screen-sm) {
+      //   background: url('../assets/filigree-rule.svg') no-repeat center center;
+      //   background-size: 100%;
+      // }
+      // @media (min-width: @screen-md) {
+      //   background: url('../assets/filigree-rule.svg') no-repeat center center;
+      //   background-size: 100%;
+      // }
+      > h2.h1 {
+        text-align: center;
+        font-family: @font-family-heading;
       }
       > .h1 {
         position: relative;
@@ -70,42 +74,42 @@ section {
           background-color: #fff;
           padding: 0 1%;
         }
-        // &::before {
-        //   content: "";
-        //   background: url('../assets/filigree-rule-left.svg') no-repeat center left;
-        //   background-size: 300%;
-        //   position: absolute;
-        //   top: 0;
-        //   left: 0;
-        //   width: 28%;
-        //   height: 100%;
-        //   @media (min-width: @screen-sm) {
-        //     width: 37%;
-        //     background-size: 180%;
-        //   }
-        //   @media (min-width: @screen-md) {
-        //     width: 47%;
-        //     background-size: 100%;
-        //   }
-        // }
-        // &::after {
-        //   content: "";
-        //   background: url('../assets/filigree-rule-right.svg') no-repeat center right;
-        //   background-size: 300%;
-        //   position: absolute;
-        //   top: 0;
-        //   right: 0;
-        //   width: 28%;
-        //   height: 100%;
-        //   @media (min-width: @screen-sm) {
-        //     width: 37%;
-        //     background-size: 180%;
-        //   }
-        //   @media (min-width: @screen-md) {
-        //     width: 47%;
-        //     background-size: 100%;
-        //   }
-        // }
+        &::before {
+          content: "";
+          background: url('../assets/filigree-rule-left.svg') no-repeat center left;
+          background-size: 300%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 28%;
+          height: 100%;
+          @media (min-width: @screen-sm) {
+            width: 37%;
+            background-size: 180%;
+          }
+          @media (min-width: @screen-md) {
+            width: 47%;
+            background-size: 100%;
+          }
+        }
+        &::after {
+          content: "";
+          background: url('../assets/filigree-rule-right.svg') no-repeat center right;
+          background-size: 300%;
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 28%;
+          height: 100%;
+          @media (min-width: @screen-sm) {
+            width: 37%;
+            background-size: 180%;
+          }
+          @media (min-width: @screen-md) {
+            width: 47%;
+            background-size: 100%;
+          }
+        }
       }
     }
   }
@@ -120,7 +124,7 @@ article {
   margin: 4ex 0;
   > header {
     // background-color: @brand-primary;
-    border-bottom: 2px solid @brand-primary;
+    border-bottom: 1px solid @brand-primary;
     padding: 2ex 0;
     h3,h4 {
       text-align: center;
@@ -213,20 +217,101 @@ article {
   }
 }
 
-#services-products {
+#services {
   background-color: #fff;
   // background: url('../assets/light_grey_floral_motif.png');
-  div {
-    > header {
-      .h1 {
+
+}
+
+#stylists {
+  background: #fff;
+  // background: url('../assets/light_grey_floral_motif.png');
+  h1, h2, h3, p, dt, dd, .h1, .h2, .h3, {
+    color: @brand-secondary;
+    // text-align: center;
+  }
+  .stylist {
+    position: relative;
+    margin: 4ex 0;
+    height: 510px;
+    background-size: 100%;
+    img {
+      display: block;
+      width: 100%;
+    }
+    .bio {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      padding-top: 1ex;
+      padding-bottom: 1ex;
+      background-color: rgba(85, 85, 85, .5);
+      h1, p {
+        margin-top: 0;
         text-align: center;
-        font-family: @font-family-heading;
+        color: white;
+        padding-left: 2ex;
+        padding-right: 2ex;
+      }
+      p {
+        margin-bottom: 0;
       }
     }
+    ul {
+      background-color: @gray-lighter;
+      padding: 2ex 2em;
+      // height: 418px !important;
+      li {
+        margin-bottom: .75ex;
+        font-size: @font-size-h6;
+      }
+    }
+    button {
+      position: absolute;
+      left: 0;
+      bottom: -4ex;
+      background-color: @brand-primary;
+      color: #fff;
+      width: 100%;
+      font-family: @headings-font-family;
+      &::before {
+        content: "\f19d";
+        .before-icon;
+      }
+    }
+    &#kimberly {
+      background: url('../assets/stylist-kimberly.jpg') no-repeat 16% top;
+      @media (min-width: 630px) {
+        background-position-x: center;
+      }
+      @media (min-width: @screen-sm) {
+        background-position-x: 18%;
+      }
+      @media (min-width: @screen-md) {
+        background-position-x: 24%;
+      }
+    }
+    &#annie {
+      background: url('../assets/stylist-annie.jpg') no-repeat center top;
+    }
+    &#meagan {
+      background: url('../assets/stylist-meagan.jpg') no-repeat center top;
+    }
+    &#kelsie {
+      background: url('../assets/stylist-kelsie.jpg') no-repeat center top;
+    }
   }
-  .product-lines {
+}
+#product-lines {
+  background-color: #fff;
+  // background: url('../assets/light_grey_floral_motif.png');
+
+  .product-links {
+    margin: 0;
     > section {
       ul {
+        padding: 0;
         li {
           display: inline-block;
           width: 44%;
@@ -246,108 +331,25 @@ article {
       }
     }
   }
-
 }
-
 #owners {
   background: #fff;
-  // background:
-  //   linear-gradient(
-  //       rgba(0, 0, 0, 0.5),
-  //       rgba(0, 0, 0, 0.5)
-  //     ),
-  //   url('../assets/banner.png') no-repeat center center;
-  min-height: 530px;
+  padding-bottom: 10ex;
   div {
-    > header {
-      .h1 {
-        text-align: center;
-        font-family: @font-family-heading;
-      }
-    }
-  }
-}
-
-#stylists {
-  background: #fff;
-  // background: url('../assets/light_grey_floral_motif.png');
-  h1, h2, h3, p, dt, dd, .h1, .h2, .h3, {
-    color: @brand-secondary;
-    // text-align: center;
-  }
-  header {
-    .h1 {
-      text-align: center;
-      font-family: @font-family-heading;
-    }
-  }
-  .stylist {
-    position: relative;
-    margin: 4ex 0;
-    min-height: 550px;
-    background-size: 100%;
-    img {
-      display: block;
-      width: 100%;
-    }
-    .bio {
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      padding-top: 1ex;
-      padding-bottom: 1ex;
-      background-color: rgba(85, 85, 85, .5);
-      h1, p {
-        margin-top: 0;
-        text-align: center;
-        color: white;
-        padding-left: 2ex;
-        padding-right: 2ex;
+    section {
+      margin-top: 4ex;
+      margin-bottom: 4ex;
+      img {
+        width: 100%;
+        margin-bottom: 2ex;
       }
       p {
-        margin-bottom: 0;
+        text-align: left;
+        font-size: @font-size-h4;
       }
-    }
-    ul {
-      list-style: none;
-      padding: 0;
-    }
-    button {
-      position: absolute;
-      left: 0;
-      bottom: -4ex;
-      background-color: @brand-primary;
-      color: #fff;
-      width: 100%;
-      font-family: @headings-font-family;
-      &::before {
-        content: "\f19d";
-        .before-icon;
-      }
-    }
-    dl {
-      padding-top: 20px;
-      // background-color: @gray-lighter;
-      padding: 1ex 1em;
-      dd {
-        margin-bottom: .75ex;
-      }
-    }
-    &#kimberly {
-      background: url('../assets/stylist-kimberly.jpg') no-repeat center top;
-    }
-    &#annie {
-      background: url('../assets/stylist-annie.jpg') no-repeat center top;
-    }
-    &#meagan {
-      background: url('../assets/stylist-kimberly.jpg') no-repeat center top;
-    }
-    &#kelsie {
-      background: url('../assets/stylist-annie.jpg') no-repeat center top;
     }
   }
 }
-
 #contact {
   position: relative;
   z-index: 2;
@@ -357,8 +359,19 @@ article {
       rgba(0, 0, 0, 0.3),
       rgba(0, 0, 0, 0.3)
     ),
-    url('../assets/salon-outside-1.jpg') no-repeat center center;
-  background-size: 100%;
+    url('../assets/salon-outside-1.jpg') no-repeat 84% center;
+  background-size: inherit;
+  @media (min-width: 510px) {
+    background-position-x: 86%;
+  }
+  @media (min-width: @screen-sm) {
+    background-position-x: 70%;
+    background-size: 140%;
+  }
+  @media (min-width: @screen-md) {
+    background-position-x: left;
+    background-size: 120%;
+  }
   min-height: 480px;
   padding: 4ex 0;
   header {
@@ -376,13 +389,30 @@ article {
   .form-group {
     margin-bottom: 2ex;
   }
+  .form-control::-webkit-input-placeholder {
+    color: @gray;
+  }
   p {
     text-align: center;
     text-shadow: 1px 1px 1px #000;
   }
+  .social {
+    a {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      margin-right: 1em;
+      background: url('../assets/fb-logo.svg') no-repeat transparent;
+    }
+    span {
+      display: inline-block;
+      vertical-align: top;
+      color: white;
+    }
+  }
   .embed-container {
     position: relative;
-    padding-bottom: 74%;
+    padding-bottom: 64%;
     height: 0;
     overflow: hidden;
     max-width: 100%;

@@ -400,7 +400,7 @@ h6 .small {
 }
 h1,
 .h1 {
-  font-size: 42px;
+  font-size: 49px;
 }
 h2,
 .h2 {
@@ -7330,7 +7330,7 @@ dd {
 }
 h1,
 .h1 {
-  font-size: 42px;
+  font-size: 49px;
 }
 h2,
 .h2 {
@@ -7373,17 +7373,12 @@ section {
   position: relative;
   z-index: 2;
 }
-@media (min-width: 768px) {
-  section > div > header {
-    background: url('../assets/filigree-rule.svg') no-repeat center center;
-    background-size: 100%;
-  }
+section > div > header {
+  margin: 10ex 0 4ex;
 }
-@media (min-width: 992px) {
-  section > div > header {
-    background: url('../assets/filigree-rule.svg') no-repeat center center;
-    background-size: 100%;
-  }
+section > div > header > h2.h1 {
+  text-align: center;
+  font-family: "Dancing Script", Helvetica, Arial, sans-serif;
 }
 section > div > header > .h1 {
   position: relative;
@@ -7393,6 +7388,50 @@ section > div > header > .h1 span {
   background-color: #fff;
   padding: 0 1%;
 }
+section > div > header > .h1::before {
+  content: "";
+  background: url('../assets/filigree-rule-left.svg') no-repeat center left;
+  background-size: 300%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 28%;
+  height: 100%;
+}
+@media (min-width: 768px) {
+  section > div > header > .h1::before {
+    width: 37%;
+    background-size: 180%;
+  }
+}
+@media (min-width: 992px) {
+  section > div > header > .h1::before {
+    width: 47%;
+    background-size: 100%;
+  }
+}
+section > div > header > .h1::after {
+  content: "";
+  background: url('../assets/filigree-rule-right.svg') no-repeat center right;
+  background-size: 300%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 28%;
+  height: 100%;
+}
+@media (min-width: 768px) {
+  section > div > header > .h1::after {
+    width: 37%;
+    background-size: 180%;
+  }
+}
+@media (min-width: 992px) {
+  section > div > header > .h1::after {
+    width: 47%;
+    background-size: 100%;
+  }
+}
 footer > div > header {
   border-bottom: 1px solid #f2f2f2;
 }
@@ -7400,7 +7439,7 @@ article {
   margin: 4ex 0;
 }
 article > header {
-  border-bottom: 2px solid #2fdab8;
+  border-bottom: 1px solid #2fdab8;
   padding: 2ex 0;
 }
 article > header h3,
@@ -7524,40 +7563,8 @@ article > section ul li span {
   text-align: center;
   font-family: "Dancing Script", Helvetica, Arial, sans-serif;
 }
-#services-products {
+#services {
   background-color: #fff;
-}
-#services-products div > header .h1 {
-  text-align: center;
-  font-family: "Dancing Script", Helvetica, Arial, sans-serif;
-}
-#services-products .product-lines > section ul li {
-  display: inline-block;
-  width: 44%;
-  padding: 3%;
-}
-@media (min-width: 768px) {
-  #services-products .product-lines > section ul li {
-    width: 30%;
-    padding: 1.5%;
-  }
-}
-@media (min-width: 992px) {
-  #services-products .product-lines > section ul li {
-    width: 20%;
-    padding: 2.5%;
-  }
-}
-#services-products .product-lines > section ul li img {
-  width: 100%;
-}
-#owners {
-  background: #fff;
-  min-height: 530px;
-}
-#owners div > header .h1 {
-  text-align: center;
-  font-family: "Dancing Script", Helvetica, Arial, sans-serif;
 }
 #stylists {
   background: #fff;
@@ -7573,14 +7580,10 @@ article > section ul li span {
 #stylists .h3 {
   color: #37280e;
 }
-#stylists header .h1 {
-  text-align: center;
-  font-family: "Dancing Script", Helvetica, Arial, sans-serif;
-}
 #stylists .stylist {
   position: relative;
   margin: 4ex 0;
-  min-height: 550px;
+  height: 510px;
   background-size: 100%;
 }
 #stylists .stylist img {
@@ -7591,6 +7594,7 @@ article > section ul li span {
   position: absolute;
   left: 0;
   bottom: 0;
+  width: 100%;
   padding-top: 1ex;
   padding-bottom: 1ex;
   background-color: rgba(85, 85, 85, 0.5);
@@ -7607,8 +7611,12 @@ article > section ul li span {
   margin-bottom: 0;
 }
 #stylists .stylist ul {
-  list-style: none;
-  padding: 0;
+  background-color: #eeeeee;
+  padding: 2ex 2em;
+}
+#stylists .stylist ul li {
+  margin-bottom: .75ex;
+  font-size: 12px;
 }
 #stylists .stylist button {
   position: absolute;
@@ -7629,32 +7637,102 @@ article > section ul li span {
   -webkit-font-smoothing: antialiased;
   margin-right: 0.5em;
 }
-#stylists .stylist dl {
-  padding-top: 20px;
-  padding: 1ex 1em;
-}
-#stylists .stylist dl dd {
-  margin-bottom: .75ex;
-}
 #stylists .stylist#kimberly {
-  background: url('../assets/stylist-kimberly.jpg') no-repeat center top;
+  background: url('../assets/stylist-kimberly.jpg') no-repeat 16% top;
+}
+@media (min-width: 630px) {
+  #stylists .stylist#kimberly {
+    background-position-x: center;
+  }
+}
+@media (min-width: 768px) {
+  #stylists .stylist#kimberly {
+    background-position-x: 18%;
+  }
+}
+@media (min-width: 992px) {
+  #stylists .stylist#kimberly {
+    background-position-x: 24%;
+  }
 }
 #stylists .stylist#annie {
   background: url('../assets/stylist-annie.jpg') no-repeat center top;
 }
 #stylists .stylist#meagan {
-  background: url('../assets/stylist-kimberly.jpg') no-repeat center top;
+  background: url('../assets/stylist-meagan.jpg') no-repeat center top;
 }
 #stylists .stylist#kelsie {
-  background: url('../assets/stylist-annie.jpg') no-repeat center top;
+  background: url('../assets/stylist-kelsie.jpg') no-repeat center top;
+}
+#product-lines {
+  background-color: #fff;
+}
+#product-lines .product-links {
+  margin: 0;
+}
+#product-lines .product-links > section ul {
+  padding: 0;
+}
+#product-lines .product-links > section ul li {
+  display: inline-block;
+  width: 44%;
+  padding: 3%;
+}
+@media (min-width: 768px) {
+  #product-lines .product-links > section ul li {
+    width: 30%;
+    padding: 1.5%;
+  }
+}
+@media (min-width: 992px) {
+  #product-lines .product-links > section ul li {
+    width: 20%;
+    padding: 2.5%;
+  }
+}
+#product-lines .product-links > section ul li img {
+  width: 100%;
+}
+#owners {
+  background: #fff;
+  padding-bottom: 10ex;
+}
+#owners div section {
+  margin-top: 4ex;
+  margin-bottom: 4ex;
+}
+#owners div section img {
+  width: 100%;
+  margin-bottom: 2ex;
+}
+#owners div section p {
+  text-align: left;
+  font-size: 18px;
 }
 #contact {
   position: relative;
   z-index: 2;
-  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../assets/salon-outside-1.jpg') no-repeat center center;
-  background-size: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../assets/salon-outside-1.jpg') no-repeat 84% center;
+  background-size: inherit;
   min-height: 480px;
   padding: 4ex 0;
+}
+@media (min-width: 510px) {
+  #contact {
+    background-position-x: 86%;
+  }
+}
+@media (min-width: 768px) {
+  #contact {
+    background-position-x: 70%;
+    background-size: 140%;
+  }
+}
+@media (min-width: 992px) {
+  #contact {
+    background-position-x: left;
+    background-size: 120%;
+  }
 }
 #contact header {
   margin-bottom: 2ex;
@@ -7671,13 +7749,28 @@ article > section ul li span {
 #contact .form-group {
   margin-bottom: 2ex;
 }
+#contact .form-control::-webkit-input-placeholder {
+  color: #555555;
+}
 #contact p {
   text-align: center;
   text-shadow: 1px 1px 1px #000;
 }
+#contact .social a {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin-right: 1em;
+  background: url('../assets/fb-logo.svg') no-repeat transparent;
+}
+#contact .social span {
+  display: inline-block;
+  vertical-align: top;
+  color: white;
+}
 #contact .embed-container {
   position: relative;
-  padding-bottom: 74%;
+  padding-bottom: 64%;
   height: 0;
   overflow: hidden;
   max-width: 100%;
