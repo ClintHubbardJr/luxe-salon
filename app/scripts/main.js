@@ -4,8 +4,6 @@ $('.navbar-brand').click(function () {
   $('.navbar-nav li').removeClass('active');
 });
 
-
-
 //Dynamically assign height
 function sizeHeader() {
   var headerHeight = $('.welcome').innerHeight() + 'px';

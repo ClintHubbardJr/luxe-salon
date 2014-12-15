@@ -225,7 +225,9 @@ article {
 #services {
   background-color: #fff;
   // background: url('../assets/light_grey_floral_motif.png');
-
+  article > header > h3 {
+    font-family: @font-family-heading;
+  }
 }
 
 #stylists {
@@ -239,7 +241,7 @@ article {
     position: relative;
     margin: 4ex 0;
     height: 510px;
-    background-size: 100%;
+    // background-size: 100%;
     img {
       display: block;
       width: 100%;
@@ -258,6 +260,9 @@ article {
         color: white;
         padding-left: 2ex;
         padding-right: 2ex;
+      }
+      h1 {
+        font-family: @font-family-heading;
       }
       p {
         margin-bottom: 0;
@@ -299,6 +304,7 @@ article {
     }
     &#annie {
       background: url('../assets/stylist-annie.jpg') no-repeat center top;
+      // background-size: 100%;
     }
     &#meagan {
       background: url('../assets/stylist-meagan.jpg') no-repeat center top;
@@ -320,14 +326,14 @@ article {
         li {
           display: inline-block;
           width: 44%;
-          padding: 3%;
+          padding: 3.5%;
           @media (min-width: @screen-sm) {
             width: 30%;
-            padding: 1.5%;
+            padding: 2%;
           }
           @media (min-width: @screen-md) {
             width: 20%;
-            padding: 2.5%;
+            padding: 3%;
           }
           img {
             width: 100%;

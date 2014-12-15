@@ -7569,6 +7569,9 @@ article > section ul li span {
 #services {
   background-color: #fff;
 }
+#services article > header > h3 {
+  font-family: "Dancing Script", Helvetica, Arial, sans-serif;
+}
 #stylists {
   background: #fff;
 }
@@ -7587,7 +7590,6 @@ article > section ul li span {
   position: relative;
   margin: 4ex 0;
   height: 510px;
-  background-size: 100%;
 }
 #stylists .stylist img {
   display: block;
@@ -7609,6 +7611,9 @@ article > section ul li span {
   color: white;
   padding-left: 2ex;
   padding-right: 2ex;
+}
+#stylists .stylist .bio h1 {
+  font-family: "Dancing Script", Helvetica, Arial, sans-serif;
 }
 #stylists .stylist .bio p {
   margin-bottom: 0;
@@ -7679,18 +7684,18 @@ article > section ul li span {
 #product-lines .product-links > section ul li {
   display: inline-block;
   width: 44%;
-  padding: 3%;
+  padding: 3.5%;
 }
 @media (min-width: 768px) {
   #product-lines .product-links > section ul li {
     width: 30%;
-    padding: 1.5%;
+    padding: 2%;
   }
 }
 @media (min-width: 992px) {
   #product-lines .product-links > section ul li {
     width: 20%;
-    padding: 2.5%;
+    padding: 3%;
   }
 }
 #product-lines .product-links > section ul li img {
