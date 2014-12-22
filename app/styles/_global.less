@@ -173,7 +173,16 @@ article {
     margin-top: 51px;
     width: 100%;
     background-size: cover;
+    @media (min-width: @screen-sm) {
+      position: relative;
+      margin-top: 10px;
+      z-index: 2;
+    }
     @media (min-width: @screen-md) {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1;
       margin-top: 62px;
     }
 
@@ -381,7 +390,7 @@ article {
   }
   @media (min-width: @screen-sm) {
     background-position-x: 70%;
-    background-size: 155%;
+    background-size: 175%;
   }
   @media (min-width: @screen-md) {
     background-position-x: left;

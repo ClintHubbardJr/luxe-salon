@@ -7493,8 +7493,19 @@ article > section ul li span {
   width: 100%;
   background-size: cover;
 }
+@media (min-width: 768px) {
+  #call-to-action #parallax-1 {
+    position: relative;
+    margin-top: 10px;
+    z-index: 2;
+  }
+}
 @media (min-width: 992px) {
   #call-to-action #parallax-1 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
     margin-top: 62px;
   }
 }
@@ -7745,7 +7756,7 @@ article > section ul li span {
 @media (min-width: 768px) {
   #contact {
     background-position-x: 70%;
-    background-size: 155%;
+    background-size: 175%;
   }
 }
 @media (min-width: 992px) {
@@ -7852,7 +7863,7 @@ article > section ul li span {
     left: 15px;
     width: 80px;
     height: 112px;
-    background: url('../assets/logo.svg') no-repeat center -34px #ffffff;
+    background: url('../assets/logo.svg') no-repeat center -36px #ffffff;
     background-size: 85%;
   }
   .navbar .navbar-header .navbar-brand::after {
