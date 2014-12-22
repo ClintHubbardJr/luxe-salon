@@ -7304,6 +7304,7 @@ body {
   }
 }
 body > section {
+  overflow: hidden;
   padding: 2ex 0 3ex;
 }
 h1,
@@ -7565,7 +7566,6 @@ article > section ul li span {
   font-family: "Dancing Script", Helvetica, Arial, sans-serif;
 }
 #services {
-  background-color: #fff;
   background: url('../assets/bg-crossword.png') #ffffff;
 }
 #services article > header > h3 {
@@ -7685,7 +7685,6 @@ article > section ul li span {
   background: url('../assets/stylist-kelsie.jpg') no-repeat center top;
 }
 #product-lines {
-  background-color: #fff;
   background: url('../assets/bg-crossword.png') #ffffff;
 }
 #product-lines .product-links {
