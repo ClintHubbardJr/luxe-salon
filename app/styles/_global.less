@@ -53,7 +53,7 @@ section {
   z-index: 2;
   > div {
     > header {
-      margin: 10ex 0 4ex;
+      margin: 8ex 0 4ex;
       > h2.h1 {
         text-align: center;
         font-family: @font-family-heading;
@@ -79,7 +79,7 @@ section {
             background-size: 180%;
           }
           @media (min-width: @screen-md) {
-            width: 47%;
+            width: 44%;
             background-size: 100%;
           }
         }
@@ -97,7 +97,7 @@ section {
             background-size: 180%;
           }
           @media (min-width: @screen-md) {
-            width: 47%;
+            width: 44%;
             background-size: 100%;
           }
         }
@@ -213,15 +213,33 @@ article {
 
 #services {
   background-color: #fff;
-  background: @section-bg-image;
+  background: @section-bg-image #fff;
   article > header > h3 {
     font-family: @font-family-heading;
+  }
+  @media (min-width: @screen-sm) {
+    .color {
+      header {
+        h3 {
+          line-height: 76px;
+        }
+      }
+    }
+  }
+  @media (min-width: 992px) {
+    .color {
+      header {
+        h3 {
+          line-height: 1.1;
+        }
+      }
+    }
   }
 }
 
 #stylists {
   background: #fff;
-  background: @section-bg-image;
+  background: @section-bg-image #fff;
   h1, h2, h3, p, dt, dd, .h1, .h2, .h3, {
     color: @brand-secondary;
   }
@@ -304,7 +322,7 @@ article {
 }
 #product-lines {
   background-color: #fff;
-  background: @section-bg-image;
+  background: @section-bg-image #fff;
 
   .product-links {
     margin: 0;
@@ -317,7 +335,7 @@ article {
           padding: 3.5%;
           @media (min-width: @screen-sm) {
             width: 30%;
-            padding: 2%;
+            padding: 4%;
           }
           @media (min-width: @screen-md) {
             width: 20%;
@@ -332,8 +350,7 @@ article {
   }
 }
 #owners {
-  // background: #fff;
-  background: @section-bg-image;
+  background: @section-bg-image #fff;
   padding-bottom: 10ex;
   div {
     section {
@@ -365,7 +382,7 @@ article {
   }
   @media (min-width: @screen-sm) {
     background-position-x: 70%;
-    background-size: 140%;
+    background-size: 155%;
   }
   @media (min-width: @screen-md) {
     background-position-x: left;

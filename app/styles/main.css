@@ -7373,7 +7373,7 @@ section {
   z-index: 2;
 }
 section > div > header {
-  margin: 10ex 0 4ex;
+  margin: 8ex 0 4ex;
 }
 section > div > header > h2.h1 {
   text-align: center;
@@ -7404,7 +7404,7 @@ section > div > header > .h1::before {
 }
 @media (min-width: 992px) {
   section > div > header > .h1::before {
-    width: 47%;
+    width: 44%;
     background-size: 100%;
   }
 }
@@ -7426,7 +7426,7 @@ section > div > header > .h1::after {
 }
 @media (min-width: 992px) {
   section > div > header > .h1::after {
-    width: 47%;
+    width: 44%;
     background-size: 100%;
   }
 }
@@ -7566,14 +7566,24 @@ article > section ul li span {
 }
 #services {
   background-color: #fff;
-  background: url('../assets/bg-crossword.png');
+  background: url('../assets/bg-crossword.png') #ffffff;
 }
 #services article > header > h3 {
   font-family: "Dancing Script", Helvetica, Arial, sans-serif;
 }
+@media (min-width: 768px) {
+  #services .color header h3 {
+    line-height: 76px;
+  }
+}
+@media (min-width: 992px) {
+  #services .color header h3 {
+    line-height: 1.1;
+  }
+}
 #stylists {
   background: #fff;
-  background: url('../assets/bg-crossword.png');
+  background: url('../assets/bg-crossword.png') #ffffff;
 }
 #stylists h1,
 #stylists h2,
@@ -7676,7 +7686,7 @@ article > section ul li span {
 }
 #product-lines {
   background-color: #fff;
-  background: url('../assets/bg-crossword.png');
+  background: url('../assets/bg-crossword.png') #ffffff;
 }
 #product-lines .product-links {
   margin: 0;
@@ -7692,7 +7702,7 @@ article > section ul li span {
 @media (min-width: 768px) {
   #product-lines .product-links > section ul li {
     width: 30%;
-    padding: 2%;
+    padding: 4%;
   }
 }
 @media (min-width: 992px) {
@@ -7705,7 +7715,7 @@ article > section ul li span {
   width: 100%;
 }
 #owners {
-  background: url('../assets/bg-crossword.png');
+  background: url('../assets/bg-crossword.png') #ffffff;
   padding-bottom: 10ex;
 }
 #owners div section {
@@ -7736,7 +7746,7 @@ article > section ul li span {
 @media (min-width: 768px) {
   #contact {
     background-position-x: 70%;
-    background-size: 140%;
+    background-size: 155%;
   }
 }
 @media (min-width: 992px) {
