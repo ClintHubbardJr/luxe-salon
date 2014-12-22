@@ -1,7 +1,11 @@
 /*jshint unused:false*/
 'use strict';
-$('.navbar-brand').click(function () {
-  $('.navbar-nav li').removeClass('active');
+// $('.navbar-brand').click(function () {
+//   $('.navbar-nav li').removeClass('active');
+// });
+
+$('.navbar-nav li a').click(function () {
+  $('.navbar-collapse').collapse('hide');
 });
 
 //Dynamically assign height

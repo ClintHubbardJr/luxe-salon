@@ -1,7 +1,6 @@
 body {
   padding-top: 51px;
   position: relative;
-  background-color: lime;
   @media (min-width: @screen-md) {
     padding-top: 62px;
   }
@@ -55,14 +54,6 @@ section {
   > div {
     > header {
       margin: 10ex 0 4ex;
-      // @media (min-width: @screen-sm) {
-      //   background: url('../assets/filigree-rule.svg') no-repeat center center;
-      //   background-size: 100%;
-      // }
-      // @media (min-width: @screen-md) {
-      //   background: url('../assets/filigree-rule.svg') no-repeat center center;
-      //   background-size: 100%;
-      // }
       > h2.h1 {
         text-align: center;
         font-family: @font-family-heading;
@@ -71,7 +62,7 @@ section {
         position: relative;
         line-height: 1.75;
         span {
-          background-color: #fff;
+          // background-color: #fff;
           padding: 0 1%;
         }
         &::before {
@@ -123,7 +114,6 @@ footer > div > header {
 article {
   margin: 4ex 0;
   > header {
-    // background-color: @brand-primary;
     border-bottom: 1px solid @brand-primary;
     padding: 2ex 0;
     h3,h4 {
@@ -132,7 +122,6 @@ article {
     }
   }
   > section {
-    // background-color: @gray-lighter;
     padding: 3ex 1em 1ex;
     ul {
       text-align: center;
@@ -224,7 +213,7 @@ article {
 
 #services {
   background-color: #fff;
-  // background: url('../assets/light_grey_floral_motif.png');
+  background: @section-bg-image;
   article > header > h3 {
     font-family: @font-family-heading;
   }
@@ -232,16 +221,14 @@ article {
 
 #stylists {
   background: #fff;
-  // background: url('../assets/light_grey_floral_motif.png');
+  background: @section-bg-image;
   h1, h2, h3, p, dt, dd, .h1, .h2, .h3, {
     color: @brand-secondary;
-    // text-align: center;
   }
   .stylist {
     position: relative;
     margin: 4ex 0;
     height: 510px;
-    // background-size: 100%;
     img {
       display: block;
       width: 100%;
@@ -270,8 +257,7 @@ article {
     }
     ul {
       background-color: @gray-lighter;
-      padding: 2ex 2em;
-      // height: 418px !important;
+      padding: 2ex 1.5em;
       li {
         margin-bottom: .75ex;
         font-size: @font-size-h6;
@@ -283,11 +269,13 @@ article {
       bottom: -4ex;
       background-color: @brand-primary;
       color: #fff;
+      letter-spacing: .5px;
       width: 100%;
       font-family: @headings-font-family;
       &::before {
         content: "\f19d";
         .before-icon;
+        text-shadow: none;
       }
     }
     &#kimberly {
@@ -316,7 +304,7 @@ article {
 }
 #product-lines {
   background-color: #fff;
-  // background: url('../assets/light_grey_floral_motif.png');
+  background: @section-bg-image;
 
   .product-links {
     margin: 0;
@@ -344,7 +332,8 @@ article {
   }
 }
 #owners {
-  background: #fff;
+  // background: #fff;
+  background: @section-bg-image;
   padding-bottom: 10ex;
   div {
     section {
@@ -364,7 +353,6 @@ article {
 #contact {
   position: relative;
   z-index: 2;
-  // background-color: @brand-primary;
   background:
     linear-gradient(
       rgba(0, 0, 0, 0.3),
@@ -384,7 +372,7 @@ article {
     background-size: 120%;
   }
   min-height: 480px;
-  padding: 4ex 0;
+  padding: 4ex 0 8ex 0;
   header {
     margin-bottom: 2ex;
     h2 {

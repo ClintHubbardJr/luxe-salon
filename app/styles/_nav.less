@@ -1,6 +1,7 @@
 .navbar {
   background-color: @brand-primary;
   border-bottom: 0;
+  box-shadow: 0px 0px 6px 0px rgba(50, 50, 50, 0.5);
   .navbar-header {
     .navbar-brand {
       margin: 0;
@@ -12,10 +13,10 @@
         left: 15px;
         display: inline-block;
         width: 60px;
-        height: 87px;
+        height: 83px;
         background: url('../assets/logo.svg') no-repeat center -26px white;
         background-size: 85%;
-        box-shadow: 0px -7px 10px 0px rgba(50, 50, 50, 0.75);
+        box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.75);
         font-family: @font-family-heading;
         text-indent: -9999px;
         z-index: 12;
@@ -25,18 +26,28 @@
         text-decoration: none;
         color: darken(@link-color, 15%);
       }
-      &:after {
-        content: '';
+      &::after {
+        content: ' ';
         display: block;
         position: absolute;
-        top: 79px;
-        left: 29px;
-        width: 32px;
-        height: 16px;
-        transform: rotate(165deg) scale(1) skew(60deg) translate(0px);
-        background-color: white;
-        box-shadow: 0px 0px 10px 2px rgba(50, 50, 50, 0.75);
-        z-index: 11;
+        top: 83px;
+        left: 12px;
+        width: 66px;
+        height: 22px;
+        background: url('../assets/logo-tip.png') no-repeat transparent;
+        background-size: 100%;
+        z-index: 12;
+        // content: '';
+        // display: block;
+        // position: absolute;
+        // top: 79px;
+        // left: 29px;
+        // width: 32px;
+        // height: 16px;
+        // transform: rotate(165deg) scale(1) skew(60deg) translate(0px);
+        // background-color: white;
+        // box-shadow: 0px 0px 10px 2px rgba(50, 50, 50, 0.75);
+        // z-index: 11;
       }
 
       @media (min-width: @screen-sm-min) {
@@ -45,22 +56,19 @@
           top: 0px;
           left: 15px;
           width: 80px;
-          height: 115px;
-          background: url('../assets/logo-half.svg') no-repeat center 0 white;
+          height: 112px;
+          background: url('../assets/logo.svg') no-repeat center -34px white;
           background-size: 85%;
         }
-        &:after {
+        &::after {
           content: '';
           display: block;
           position: absolute;
-          top: 105px;
-          left: 34px;
-          width: 42px;
-          height: 21px;
+          top: 112px;
+          left: 12px;
+          width: 86px;
+          height: 22px;
         }
-      }
-      @media (min-width: @screen-md-min) {
-
       }
 
     }
@@ -77,6 +85,27 @@
           background-color: @gray;
         }
       }
+      &:focus {
+        background-color: transparent;
+        outline: 0;
+        .icon-bar {
+          background-color: @gray;
+        }
+      }
+      &:active {
+        background-color: transparent;
+        outline: 0;
+        .icon-bar {
+          background-color: @gray;
+        }
+      }
+      &:visited {
+        background-color: transparent;
+        outline: 0;
+        .icon-bar {
+          background-color: #fff;
+        }
+      }
     }
   }
   .nav.navbar-nav {
@@ -87,8 +116,14 @@
         padding-top: 21px;
         padding-bottom: 21px;
         text-align: center;
+        text-shadow: 0px 0px .25px @brand-secondary;
       }
       &.active {
+        a {
+          background-color: darken(@brand-primary, 7%);
+        }
+      }
+      &:hover {
         a {
           background-color: darken(@brand-primary, 7%);
         }
