@@ -1,4 +1,5 @@
 body {
+  background: @section-bg-image #fff;
   padding-top: 51px;
   position: relative;
   @media (min-width: @screen-md) {
@@ -146,13 +147,11 @@ article {
   font-style: italic;
 }
 
-
-
 #call-to-action {
   position: relative;
   z-index: 0;
   overflow: hidden;
-  height: 522px;
+  height: 344px;
   @media (min-width: @screen-sm) {
     height: 411px;
   }
@@ -197,17 +196,19 @@ article {
       }
       p {
         font-family: @font-family-sans-serif;
-        font-size: @font-size-h4;
+        font-size: 13px;
+        font-weight: 200;
         min-width: 320px;
         max-width: 475px;
         margin: 0 auto;
       }
       h1 {
-        font-size: 4em;
+        font-size: 3em;
         font-family: @font-family-heading;
         margin-top: 0;
       }
       h2 {
+        font-size: 30px;
         a {
           color: white;
         }
@@ -216,6 +217,26 @@ article {
         color: @brand-primary;
         text-align: center;
         font-family: @font-family-heading;
+      }
+      @media (min-width: @screen-sm) {
+        h1 {
+          font-size: 4em;
+          font-family: @font-family-heading;
+          margin-top: 0;
+        }
+        p {
+          font-size: @font-size-base;
+        }
+      }
+      @media (min-width: @screen-md) {
+        h1 {
+          font-size: 4em;
+          font-family: @font-family-heading;
+          margin-top: 0;
+        }
+        p {
+          font-size: @font-size-base;
+        }
       }
     }
   }
@@ -375,6 +396,17 @@ article {
     }
   }
 }
+#thank-you {
+
+  article {
+    > header {
+      border-bottom: 0;
+      > h3 {
+        font-family: @font-family-heading;
+      }
+    }
+  }
+}
 #contact {
   position: relative;
   z-index: 2;
@@ -421,6 +453,7 @@ article {
     text-shadow: 1px 1px 1px #000;
   }
   .social {
+    margin-bottom: 2ex;
     a {
       display: inline-block;
       width: 40px;
