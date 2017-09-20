@@ -7472,32 +7472,24 @@ article > section ul li span {
   position: relative;
   z-index: 0;
   overflow: hidden;
-  height: 344px;
-}
-@media (min-width: 768px) {
-  #call-to-action {
-    height: 411px;
-  }
+  height: 409px;
 }
 @media (min-width: 992px) {
   #call-to-action {
-    height: 411px;
+    height: 382px;
   }
 }
 #call-to-action #parallax-1 {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../assets/banner.png') no-repeat center center;
   position: fixed;
-  top: 0;
+  top: 51px;
   left: 0;
   z-index: 1;
-  margin-top: 51px;
   width: 100%;
   background-size: cover;
 }
 @media (min-width: 768px) {
   #call-to-action #parallax-1 {
-    position: relative;
-    margin-top: 10px;
     z-index: 2;
   }
 }
@@ -7507,7 +7499,7 @@ article > section ul li span {
     top: 0;
     left: 0;
     z-index: 1;
-    margin-top: 62px;
+    padding-top: 51px;
   }
 }
 #call-to-action #parallax-1 .welcome {
@@ -7814,6 +7806,10 @@ article > section ul li span {
 #contact .form-control::-webkit-input-placeholder {
   color: #555555;
 }
+#contact h2,
+#contact h2 a {
+  color: #fff;
+}
 #contact p {
   text-align: center;
   text-shadow: 1px 1px 1px #000;
@@ -7853,6 +7849,7 @@ article > section ul li span {
 .navbar {
   background-color: #9fe2d7;
   border-bottom: 0;
+  margin-bottom: 0;
   box-shadow: 0px 0px 6px 0px rgba(50, 50, 50, 0.5);
 }
 .navbar .navbar-header .navbar-brand {

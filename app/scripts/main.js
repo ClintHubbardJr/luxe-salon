@@ -9,11 +9,9 @@ $('.navbar-nav li a').click(function () {
 });
 
 //Dynamically assign height
-function sizeHeader() {
-  var headerHeight = $('.welcome').innerHeight() + 'px';
-  $('#call-to-action').css('height', headerHeight);
-}
+// function sizeHeader() {
+//   var headerHeight = $('.welcome').innerHeight() + 'px';
+//   $('#call-to-action').css('height', headerHeight);
+// }
 
-// $(document).ready(sizeHeader);
-
-$(window).resize(sizeHeader);
+// $(window).resize(sizeHeader);
