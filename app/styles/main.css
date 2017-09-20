@@ -7910,6 +7910,11 @@ article > section ul li span {
     height: 22px;
   }
 }
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .navbar .navbar-header .navbar-brand a {
+    background-size: 130%;
+  }
+}
 .navbar .navbar-header .navbar-toggle {
   border: 0;
 }
