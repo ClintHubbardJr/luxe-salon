@@ -4,13 +4,15 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { BannerComponent } from './components/banner/banner.component';
+import { ScheduleComponent } from './components/schedule/schedule.component';
 
 
 @NgModule({
   declarations: [
     // Components
     AppComponent,
-    BannerComponent
+    BannerComponent,
+    ScheduleComponent
   ],
   imports: [
     // Modules
