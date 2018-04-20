@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpModule } from '@angular/http';
 
 
 import { AppComponent } from './app.component';
@@ -7,6 +8,7 @@ import { BannerComponent } from './components/banner/banner.component';
 import { ScheduleComponent } from './components/schedule/schedule.component';
 import { StoreservicesComponent } from './components/storeservices/storeservices.component';
 
+import { DataService } from './services/data.service';
 
 @NgModule({
   declarations: [
@@ -18,10 +20,12 @@ import { StoreservicesComponent } from './components/storeservices/storeservices
   ],
   imports: [
     // Modules
-    BrowserModule
+    BrowserModule,
+    HttpModule
   ],
   providers: [
     // Services
+    DataService
   ],
   bootstrap: [AppComponent] // Root component
 })

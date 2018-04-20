@@ -12,7 +12,7 @@ export class ScheduleComponent implements OnInit {
   schedule:string[];
 
   constructor() {
-    console.log('Banner constructor ran...');
+    console.log('ScheduleComponent constructor ran...');
   }
 
   ngOnInit() {

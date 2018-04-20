@@ -12,7 +12,9 @@ export class BannerComponent implements OnInit {
   title = 'Welcome to Luxe Salon';
   desc = 'A full service Framesi / Redken hair salon located in beautiful historic downtown Snohomish, Washington. We look forward to making you look your best for any occasion.';
 
-  constructor() { }
+  constructor() {
+    console.log('BannerComponent constructor ran...');
+  }
 
   ngOnInit() {
   }
